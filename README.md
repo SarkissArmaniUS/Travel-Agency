@@ -101,9 +101,3 @@ public/                  # images and icons
 ---
 
 ![screenshot-Travel_App_2](https://github.com/SarkissArmaniUS/next.js-Travel_Agency_Deployed/assets/97789627/c611eea1-abf0-4101-8283-0d428a9f2e59)
-
----
-
-## 🙏 Credits
-
-Base layout and assets: Hilink travel template from a public Next.js tutorial. Animations, interactions, new sections and the contact backend are my own work.
