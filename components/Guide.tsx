@@ -12,7 +12,6 @@ const Guide = () => {
     target: boatRef,
     offset: ["start end", "end start"],
   });
-  // Картинка трохи збільшена й повільніше рухається за скролом
   const scale = useTransform(scrollYProgress, [0, 1], [1.2, 1]);
   const y = useTransform(scrollYProgress, [0, 1], [-40, 40]);
 

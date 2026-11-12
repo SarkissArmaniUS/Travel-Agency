@@ -8,7 +8,6 @@ import { inputClass } from "./formStyles";
 
 type Status = "idle" | "sending" | "success" | "error";
 
-// Необов'язково: публічна адреса для прямого mailto-посилання (див. .env.local.example)
 const PUBLIC_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL;
 
 const Contact = () => {

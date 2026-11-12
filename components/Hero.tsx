@@ -12,7 +12,6 @@ const TITLE = "Putuk Truno Camp Area".split(" ");
 
 const Hero = () => {
   const [videoOpen, setVideoOpen] = useState(false);
-  // Паралакс фону-карти при скролі
   const { scrollY } = useScroll();
   const mapY = useTransform(scrollY, [0, 900], [0, 140]);
 

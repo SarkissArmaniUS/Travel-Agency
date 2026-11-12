@@ -168,7 +168,7 @@ html.lenis body {
   overflow: hidden;
 }
 
-/* "reduce motion" CSS */
+/* "Reduce motion" CSS */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

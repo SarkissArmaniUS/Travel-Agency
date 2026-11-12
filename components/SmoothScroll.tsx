@@ -17,7 +17,6 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-    // anchors: клік по <a href="#id"> плавно скролить; offset = висота sticky-навбару
     const instance = new Lenis({
       duration: 1.1,
       smoothWheel: true,

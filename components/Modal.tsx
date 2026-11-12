@@ -39,7 +39,6 @@ const Modal = ({ open, onClose, title, wide, children }: ModalProps) => {
 
   if (!mounted) return null;
 
-  // Portal потрібен: у sticky-навбара є blur/transform, які ламають position: fixed
   return createPortal(
     <AnimatePresence>
       {open && (

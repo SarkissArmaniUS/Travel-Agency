@@ -7,7 +7,6 @@ import { PEOPLE_URL } from "@/constants";
 import { EASE } from "@/lib/motion";
 import Reveal from "./Reveal";
 
-// Тимчасові відгуки: заміни на справжні
 const ITEMS = [
   {
     name: "Anna K.",

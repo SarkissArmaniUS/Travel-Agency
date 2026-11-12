@@ -5,7 +5,6 @@ export const runtime = "nodejs";
 const escapeHtml = (s: string) =>
   s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!);
 
-// Простий ліміт: 5 листів на годину з однієї IP (в пам'яті; на serverless діє частково)
 const hits = new Map<string, number[]>();
 const WINDOW = 60 * 60 * 1000;
 const LIMIT = 5;
@@ -26,7 +25,6 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Invalid request." }, { status: 400 });
   }
 
-  // Honeypot: тихо вдаємо успіх
   if (typeof body.company === "string" && body.company.trim() !== "") {
     return NextResponse.json({ ok: true });
   }

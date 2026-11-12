@@ -5,7 +5,6 @@ import { motion } from "motion/react";
 import { EASE } from "@/lib/motion";
 import Reveal from "./Reveal";
 
-// Тимчасові дані й картинки: заміни на свої напрямки
 const DESTINATIONS = [
   { name: "Putuk Truno", place: "Pasuruan, Indonesia", price: "from $120", rating: "4.9", bg: "bg-bg-img-1" },
   { name: "Mountain View", place: "Wilderness Trail", price: "from $95", rating: "4.8", bg: "bg-bg-img-2" },

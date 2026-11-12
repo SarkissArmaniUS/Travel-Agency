@@ -23,7 +23,6 @@ const Features = () => {
     target: sectionRef,
     offset: ["start end", "end start"],
   });
-  // Телефон їде вгору повільніше за контент і тримає нахил 15°
   const phoneY = useTransform(scrollYProgress, [0, 1], [120, -120]);
 
   return (

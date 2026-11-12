@@ -19,7 +19,7 @@ interface CampProps {
 const CampSite = ({ backgroundImage, title, subtitle, peopleJoined }: CampProps) => {
   return (
       <div
-          className={`h-full w-[85vw] shrink-0 snap-center sm:w-[60vw] lg:w-full lg:min-w-[1100px] ${backgroundImage} rounded-3xl bg-cover bg-center bg-no-repeat lg:rounded-r-5xl 2xl:rounded-5xl`}
+          className={`h-full w-[85vw] shrink-0 snap-center sm:w-[60vw] lg:w-[72vw] lg:max-w-[1100px] ${backgroundImage} rounded-3xl bg-cover bg-center bg-no-repeat lg:rounded-r-5xl 2xl:rounded-5xl`}
       >
       <div className="flex h-full flex-col items-start justify-between p-6 lg:px-20 lg:py-10">
         <div className="flexCenter gap-4">
@@ -59,7 +59,6 @@ const Camp = () => {
   useEffect(() => {
     const mm = gsap.matchMedia();
 
-    // Только десктоп и без reduce-motion
     mm.add("(min-width: 1024px) and (prefers-reduced-motion: no-preference)", () => {
       const wrap = wrapRef.current;
       const track = trackRef.current;
@@ -91,7 +90,7 @@ const Camp = () => {
       <section className="2xl:max-container relative py-10 lg:mb-10 lg:py-20 xl:mb-20">
         <div
             ref={wrapRef}
-            className="hide-scrollbar h-[420px] w-full snap-x snap-mandatory overflow-x-auto sm:h-[460px] lg:h-[400px] lg:snap-none lg:overflow-hidden xl:h-[640px]"
+            className="hide-scrollbar h-[420px] w-full snap-x snap-mandatory overflow-x-auto sm:h-[460px] lg:h-[min(480px,62vh)] lg:snap-none lg:overflow-hidden xl:h-[min(600px,68vh)]"
         >
           <div ref={trackRef} className="flex h-full w-max items-start justify-start gap-4 px-6 lg:gap-8 lg:px-0">
             <CampSite

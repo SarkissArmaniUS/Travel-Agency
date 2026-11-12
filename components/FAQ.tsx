@@ -5,7 +5,6 @@ import { AnimatePresence, motion } from "motion/react";
 import { EASE } from "@/lib/motion";
 import Reveal from "./Reveal";
 
-// Тимчасові питання: заміни на свої
 const FAQS = [
   {
     q: "Does the app work without internet?",

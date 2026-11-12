@@ -27,7 +27,6 @@ const CountUp = ({ to, suffix = "", decimals = 0 }: { to: number; suffix?: strin
   return <span ref={ref}>0{suffix}</span>;
 };
 
-// Тимчасові цифри: заміни на справжні
 const STATS = [
   { value: 50000, suffix: "+", label: "Travelers on the trails" },
   { value: 120, suffix: "+", label: "Offline-ready locations" },

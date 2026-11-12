@@ -5,7 +5,6 @@ import { EASE } from "@/lib/motion";
 import Button from "./Button";
 import Reveal from "./Reveal";
 
-// Тимчасові тарифи: заміни на свої
 const PLANS = [
   {
     name: "Explorer",
