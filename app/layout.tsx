@@ -1,28 +1,42 @@
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
 
-import './globals.css'
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import SmoothScroll from "@/components/SmoothScroll";
+import ScrollProgress from "@/components/ScrollProgress";
+import BackToTop from "@/components/BackToTop";
+
+const title = "Hilink | Travel & Camping App";
+const description =
+  "Offline maps, trip planning with friends and an AR trail guide. Find your next camp and get there without getting lost.";
 
 export const metadata: Metadata = {
-  title: 'Travel',
-  description: 'Travel UI/UX App for Camping',
-}
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
+  title: { default: title, template: "%s | Hilink" },
+  description,
+  openGraph: {
+    title,
+    description,
+    type: "website",
+    // Поклади картинку 1200x630 у public/og.png
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: title }],
+  },
+  twitter: { card: "summary_large_image", title, description, images: ["/og.png"] },
+};
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body>
-        <Navbar />
-        <main className="relative overflow-hidden">
-          {children}
-        </main>
-        <Footer />
+        <SmoothScroll>
+          <ScrollProgress />
+          <Navbar />
+          <main className="relative overflow-hidden">{children}</main>
+          <Footer />
+          <BackToTop />
+        </SmoothScroll>
       </body>
     </html>
-  )
+  );
 }
