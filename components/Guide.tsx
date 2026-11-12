@@ -43,8 +43,7 @@ const Guide = () => {
               alt="boat"
               width={1440}
               height={580}
-              className="w-full object-cover object-center"
-            />
+              className="h-[360px] w-full object-cover object-center sm:h-[440px] lg:h-auto"            />
           </motion.div>
         </div>
 
